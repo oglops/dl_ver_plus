@@ -5,6 +5,7 @@ from PyQt4 import QtGui, QtCore, uic
 from PyQt4.QtCore import Qt, QString, pyqtSignal, pyqtSlot
 from PyQt4.QtCore import SIGNAL
 import base64
+import re
 
 import dlp.constants as constants
 from dlp.core import DeadlineRepo
@@ -19,7 +20,7 @@ class VerWidget(QtGui.QWidget):
 
     def __init__(self, plugin=None, args=None, repo=None, parent=None):
         super(VerWidget, self).__init__(parent)
-        self.ui = uic.loadUi('verWidget.ui', self)
+        self.ui = uic.loadUi(r'verWidget.ui', self)
         self.eachRow = 5
         self.ui.groupBox.setTitle(plugin)
         self.plugin = plugin
@@ -274,12 +275,17 @@ class VerPlusUI(QtGui.QDialog):
         if len(sys.argv) >= 2:
             self.root = sys.argv[1]
         else:
-            self.root = dlp.core.get_default_repo()
+            # self.root = dlp.core.get_default_repo()
+            self.root = re.search('^.*(?=scripts)',__file__).group()[:-1]
         self.populate_ver_widgets()
 
         # set repo dir on the repoDirLE lineEdit
         self.ui.browseBtn.clicked.connect(self.browse_repo)
+        # self.ui.browseBtn.setAutoDefault(False)
+        self.ui.repoDirLE.setEnabled(False)
         self.ui.repoDirLE.setText(self.repo.root)
+        self.ui.repoDirLE.returnPressed.connect(self.set_repo)
+
 
         if DEBUG:
             self.ui.browseBtn.setContextMenuPolicy(Qt.CustomContextMenu)
@@ -297,6 +303,10 @@ class VerPlusUI(QtGui.QDialog):
 
             # if root is valid
             self._debug_reload_plugins()
+
+    def set_repo(self):
+        self.root = str(self.ui.repoDirLE.text())
+        # self._debug_reload_plugins()
 
     def populate_ver_widgets(self):
                # repo = DeadlineRepo(root=r'c:\DeadlineRepository')
