@@ -229,7 +229,7 @@ class ClickableLabel(QtGui.QLabel):
     def openBrowser(self):
         'open blog in web browser'
         import webbrowser
-        webbrowser.open('https://ilmvfx.wordpress.com/')
+        webbrowser.open('https://ilmvfx.wordpress.com/2014/06/21/deadline-5-2-how-to-add-latest-maya-version-2015-support-in-submitter-ui-and-plugin-configuration-ui-zhuangbility/')
 
 
 class VerPlusUI(QtGui.QDialog):
