@@ -1,10 +1,14 @@
 dl_ver_plus
 ===========
 
-set the maximum plugin version supported by deadline / 脑残工具合集之2
-shitty tools i wrote over the years / 
+set the maximum plugin version supported by deadline
+shitty tools i wrote over the years / 脑残工具合集之2
 
-简单使用法
+![Imgur](http://i.imgur.com/TT9Ek7P.png)
+
+![Imgur](http://i.imgur.com/mgYybwf.png)
+
+简单使用方法
 -----
 
 直接全部复制到X:\DeadlineRepository\scripts\General即可
