@@ -27,7 +27,19 @@ lz使用了regex(脑残法)来搜索替换已有的plugin的配置文件们(.dli
 如果想装可以 
 
     pip install -r requirements.txt
+
+需要Deadline 5.2.49424或更高
     
+已知问题
+-----
+* 如果Deadline版本<5.2.49424 , 从菜单启动时可能会看到如下错误，这也许是因为自带的ironPython太老了，那只好在外面用了
+
+![Imgur](http://i.imgur.com/ZNDhxIX.png)
+
+在外面用可以直接双击dp_ver++.pyw 或者(因为lz假设.ui在同一目录下)
+
+    cd X:\DeadlineRepository\scripts\General\ver++
+    python dp_ver++.pyw
     
 群抽
 -----
