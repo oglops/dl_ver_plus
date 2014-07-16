@@ -2,7 +2,11 @@ dl_ver_plus
 ===========
 
 set the maximum plugin version supported by deadline
+
 shitty tools i wrote over the years / 脑残工具合集之2
+
+关于此脑残作是做什么的，戳[这里](https://ilmvfx.wordpress.com/2014/06/21/deadline-5-2-how-to-add-latest-maya-version-2015-support-in-submitter-ui-and-plugin-configuration-ui-zhuangbility/)(墙外)
+
 
 ![Imgur](http://i.imgur.com/TT9Ek7P.png)
 
@@ -43,4 +47,4 @@ lz使用了regex(脑残法)来搜索替换已有的plugin的配置文件们(.dli
     
 群抽
 -----
-围观lz脑抽过程戳[这里](https://ilmvfx.wordpress.com/2014/06/21/deadline-5-2-how-to-add-latest-maya-version-2015-support-in-submitter-ui-and-plugin-configuration-ui-zhuangbility/?preview=true&preview_id=3729&preview_nonce=6e2684990a)(墙外 请自助)
+围观lz脑抽过程戳[这里](https://ilmvfx.wordpress.com/2014/06/21/deadline-5-2-how-to-add-latest-maya-version-2015-support-in-submitter-ui-and-plugin-configuration-ui-zhuangbility/)(墙外 请自助)
